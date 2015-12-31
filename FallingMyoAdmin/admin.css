@@ -1,0 +1,85 @@
+html {
+    /*background-image:url(MainJustBG.jpg);*/
+    background-image:url(MainPage_parchment_backdrop2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    <!--background-size: cover;-->
+}
+
+nav#navBar {
+    /*background-color: black;*/
+    background-image: url(NavBar.jpg);
+    background-size: 100%;
+    height: 100px;
+    width: inherit;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -10px;
+}
+
+div#logo {
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    width:120px;
+    height:80px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: -20px;
+}
+
+h1#productName {
+    font-family: "Verdana", cursive;
+    display: inline-block;
+    color: white;
+    margin-left: 20px;
+    font-size: 2em;
+}
+
+h1#loggedIn {
+    font-family: "Verdana", cursive;
+    display: inline-block;
+    color: white;
+    float: right;
+    font-size: 1em;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+table#patientTable {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+table#patientTable tr:nth-child(even) { /*(even) or (2n 0)*/
+	background: #eedaf9;
+    border-radius: 25px;
+}
+table#patientTable tr:nth-child(odd) { /*(odd) or (2n 1)*/
+	background: #c8a8d8;
+    border-radius: 25px;
+}
+
+th {
+    background: #FFFFFF;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Arial";
+}
+td {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Arial";
+    font-size: 0.80em;
+}
+
+.roomNo {
+    display: inline;
+}
+
+button#roomButton {
+   float:right; 
+}

@@ -1,0 +1,149 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/newPatientLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/newPatientNameLabelTextView"
+            android:text="Name : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"/>
+
+        <EditText
+            android:id="@+id/newPatientNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below = "@+id/newPatientNameLabelTextView"/>
+
+        <TextView
+            android:id="@+id/newPatientEmailLabelTextView"
+            android:text="Email :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newPatientNameEditText"/>
+
+        <EditText
+            android:id="@+id/newPatientEmailEditText"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newPatientEmailLabelTextView"/>
+
+        <TextView
+            android:id="@+id/newPatientPasswordLabelTextView"
+            android:text="Password :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newPatientEmailEditText"/>
+
+        <EditText
+            android:id="@+id/newPatientPasswordEditText"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newPatientPasswordLabelTextView"/>
+
+        <TextView
+            android:id="@+id/newPatientPasswordConfirmLabelTextView"
+            android:text="Confirm Password :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newPatientPasswordEditText"/>
+
+        <EditText
+            android:id="@+id/newPatientPasswordConfirmEditText"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newPatientPasswordConfirmLabelTextView"/>
+
+        <TextView
+            android:id="@+id/newPatientErrorMessageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newPatientPasswordConfirmEditText"/>
+
+        <Button
+            android:id="@+id/registerNewPatientButton"
+            android:text="Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newPatientErrorMessageTextView"
+            android:layout_alignParentRight="true"
+            android:onClick="registerNewPatient"/>
+
+        <Button
+            android:id="@+id/cancelRegistrationButton"
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newPatientErrorMessageTextView"
+            android:layout_toLeftOf="@+id/registerNewPatientButton"
+            android:onClick="toLoginScreen"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/patientEmailLabelTextView"
+            android:text="Email :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"/>
+
+        <EditText
+            android:id="@+id/patientEmailEditText"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/patientEmailLabelTextView"/>
+
+        <TextView
+            android:id="@+id/patientPasswordLabelTextView"
+            android:text="Password :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/patientEmailEditText"/>
+
+        <EditText
+            android:id="@+id/patientPasswordEditText"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/patientPasswordLabelTextView"/>
+
+        <TextView
+            android:id="@+id/loginErrorMessageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/patientPasswordEditText"/>
+
+        <Button
+            android:id="@+id/loginPatientButton"
+            android:text="Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/loginErrorMessageTextView"
+            android:onClick="loginPatient"/>
+
+        <Button
+            android:id="@+id/newPatientButton"
+            android:text="New Patient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginErrorMessageTextView"
+            android:layout_toLeftOf="@id/loginPatientButton"
+            android:onClick="toRegisterNewPatientScreen"/>
+    </RelativeLayout>
+
+</FrameLayout>
